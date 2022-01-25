@@ -1,0 +1,87 @@
+<html>
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+<body>
+    <img src="banner.jpg" width=100%>
+
+    <div class="w3-bar w3-black">
+		<button class="w3-bar-item w3-button" onclick="openFilm('Profile')">Profile</button>
+        <button class="w3-bar-item w3-button" onclick="openFilm('TheGreatestShowman')">The Greatest Showman</button>
+        <button class="w3-bar-item w3-button" onclick="openFilm('HomeAlone')">Home Alone</button>
+        <button class="w3-bar-item w3-button" onclick="openFilm('Interstellar')">Interstellar</button>
+		<button class="w3-bar-item w3-button" onclick="openFilm('Aladdin')">Aladdin</button>
+		<button class="w3-bar-item w3-button" onclick="openFilm('NowYouSeeMe')">Now You See Me</button>
+    </div>
+
+    <div id="Home" class="w3-container film w3-animate-left">
+        <center>
+            <h1>Welcome</h1>
+            <img src="welcome.jpg" width="500" height="300">
+        </center>
+    </div>
+	
+	<div id="Profile" class="w3-container film w3-animate-left" style="display:none">
+        <center>
+		<h2>NIM: 10121093</h2>
+		<hr>
+		<h2>Nama: Ghina Nur Azizah</h2>
+		<hr>
+		<h2>Kelas: IF-3</h2>
+		</center>
+    </div>
+	
+    <div id="TheGreatestShowman" class="w3-container film w3-animate-left" style="display:none">
+		<h2>The Greatest Showman</h2>
+        <p>Film The Greatest Showman ini menceritakan seorang pria yang memiliki ambisi untuk mewujudkan mimpinya yaitu Barnum (Hugh Jackman). 
+        Awalnya Barnum dipecat lantaran perusahaan tempat ia bekerja akan bangkrut. Barnum pun berpikir untuk meminjam uang ke bank dan membeli sebuah museum.</p>
+        <img src="thegreatestshowman.jpg" width="400" height="300">
+    </div>
+
+    <div id="HomeAlone" class="w3-container film w3-animate-zoom" style="display:none">
+        <h2>Home Alone</h2>
+        <p>Film ini berkisah tentang seorang anak kecil bernama Kevin McCallister.
+        Keluarganya berencana pergi liburan ke Paris. Sebagai sosok yang paling kecil,
+        Kevin McCallister sering diganggu oleh saudara-saudaranya. Karena kesal, dia pun berharap keluarganya menghilang dari hidupnya.</p>
+        <img src="homealone.jpg">
+    </div>
+
+    <div id="Interstellar" class="w3-container film w3-animate-bottom" style="display:none">
+        <h2>Interstellar</h2>
+        <p>Interstellar menceritakan tentang keadaan bumi di masa depan yang sudah tidak dapat dihuni lagi.
+        Banyak makhluk hidup yang sudah punah karena terjangkit dengan wabah penyakit.
+        Begitu juga dengan tanaman, hampir semua tanaman tidak layak dimakan karena sudah terinfeksi dengan penyakit.
+        Saat itu hanya jagung yang dapat dikonsumsi manusia agar dapat bertahan hidup.</p>
+        <img src="interstellar.jpg" width="300" height="400">
+    </div>
+	
+	<div id="Aladdin" class="w3-container film w3-animate-zoom" style="display:none">
+        <h2>Aladdin</h2>
+        <p>Aladdin, seorang pencuri muda yang baik hati (sering disebut "tikus jalanan") yang tinggal di kota Arab,
+		Agrabah, bersama dengan monyet peliharaannya, Abu, menyelamatkan dan berteman dengan Putri Jasmine,
+		yang menyelinap keluar dari istana untuk menjelajah, bosan dengan hidupnya yang terlindung.</p>
+        <img src="aladdin.jpg" width="300" height="400">
+    </div>
+
+	<div id="NowYouSeeMe" class="w3-container film w3-animate-bottom" style="display:none">
+        <h2>Now You See Me</h2>
+        <p>Film ini mengisahkan empat pesulap jalanan, yaitu J. Daniel Atlas, Merritt McKinney,
+		Henley Reeves, dan Jack Wilder. Mereka mendapatkan panggilan misterius ke sebuah alamat
+		yang tidak jelas dengan kerahasiaan di dalamnya. Setahun kemudian, mereka tampil sebagai
+		Four Horsemen pada sebuah pertunjukan di Las Vegas.</p>
+        <img src="nowyouseeme.jpg" width="300" height="400">
+    </div>
+
+    <script>
+        function openFilm(namaFilm) {
+            var i;
+            var x = document.getElementsByClassName("film");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(namaFilm).style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
